@@ -1,0 +1,120 @@
+{% extends 'user/index.html' %}
+{% block body %}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+</head>
+
+<body>
+<form id="form1" name="form1" method="post" action="" enctype="multipart/form-data">
+    {% if r %}
+       <h3>Amount : {{ r }}</h3>
+        <table class="table table-borderless">
+        <th></th>
+        <th><a href="/insert_prediction" onclick="return confirm('Are you sure to add as property')">Add as Property</a> </th>
+        </table>
+    {% endif %}
+  <table class="table table-borderless">
+    <tr>
+      <td ><div align="center">Zone</div></td>
+      <td>
+      <select name="zone" id="select" class="form-control" required>
+
+          <option value="0">Residential Low Density</option>
+          <option value="1">Residential Medium Density</option>
+          <option value="2">Commercial</option>
+          <option value="3">Floating Village Residential</option>
+          <option value="4">Residential High Density</option>
+</select></td>
+    </tr>
+    <tr>
+      <td ><div align="center">Lotfrontage</div></td>
+      <td><input type="text" name="lotfrontage" id="textfield"  class="form-control" required /></td>
+    </tr>
+       <tr>
+      <td ><div align="center">Lotarea</div></td>
+      <td><input type="text" name="lotarea" id="textfield"  class="form-control" required/></td>
+    </tr>
+       <tr>
+           <td scope="row"><div align="center">Street Type</div> </td>
+    <td>
+      <select name="street" id="select"  class="form-control" required>
+
+          <option value="0">Pave</option>
+          <option value="1">Grvl</option>
+</select></td></tr>
+    <tr>
+        <td><div align="center">Alley Type</div></td>
+      <td>
+      <select name="alley" id="select"  class="form-control" required>
+
+          <option value="0">No alley access</option>
+          <option value="1">Grvl</option>
+          <option value="2">Pave</option>
+</select></td>
+    </tr>
+    <tr>
+      <td><div align="center">Lotshape</div></td>
+      <td>
+      <select name="lotshape" id="select"  class="form-control" required>
+
+          <option value="0">Regular</option>
+          <option value="1">IR1: Slightly irregular</option>
+          <option value="2">IR2: Moderately Irregular</option>
+          <option value="3">IR3: Irregular</option>
+</select></td>
+    </tr>
+ <tr>
+      <td><div align="center">Utilities</div></td>
+      <td>
+      <select name="utilities" id="select"  class="form-control" required>
+
+          <option value="0">All Public Utilities (E,G,W,& S)</option>
+          <option value="1">NoSeWa: Electricity and Gas Only </option>
+
+</select></td>
+    </tr>
+
+       <tr>
+           <td><div align="center">House Style</div></td>
+      <td>
+      <select name="house" id="select"  class="form-control" required>
+
+          <option value="0">1Story</option>
+          <option value="1">2Story</option>
+          <option value="2">1.5Story: 2nd level finished</option>
+          <option value="3">1.5Story: 2nd level unfinished</option>
+          <option value="4">Split Foyer</option>
+          <option value="5">Split Lvl</option>
+          <option value="6">2.5Story: 2nd level unfinished</option>
+          <option value="7">2.5Story: 2nd level finished</option>
+</select></td>
+    </tr>
+       <tr>
+      <td><div align="center">Year Build</div></td>
+      <td><input type="year" name="yearbuild" id="textfield"  class="form-control" required /></td>
+    </tr>
+       <tr>
+      <td><div align="center">Bedroom</div></td>
+      <td><input type="text" name="bedroom" id="textfield"  class="form-control" required/></td>
+    </tr>
+       <tr>
+      <td><div align="center">Kitchen</div></td>
+      <td><input type="text" name="kitchen" id="textfield"  class="form-control" required/></td>
+    </tr>
+
+
+
+    <tr>
+        <th></th>
+      <td >
+        <input type="submit" name="button" id="button" value="Predict" class="btn btn-dark rounded" />
+    </td>
+    </tr>
+  </table>
+</form>
+</body>
+</html>
+{% endblock %}

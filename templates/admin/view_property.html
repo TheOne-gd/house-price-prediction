@@ -1,0 +1,53 @@
+{% extends 'admin/index.html' %}
+{% block body %}
+
+<html>
+<head>
+</head>
+<body>
+<form action="" method="post"><table class="table table-hover">
+
+
+ <tr>
+    <th  scope="col">#</th>
+    <th   scope="col">zone</th>
+    <th  scope="col">lotfrontage</th>
+    <th  scope="col">lotarea</th>
+    <th  scope="col">street type</th>
+    <th   scope="col">alley type</th>
+    <th   scope="col">lotshape</th>
+    <th   scope="col">utilities</th>
+    <th   scope="col">housestyle</th>
+    <th   scope="col">yearbuild</th>
+    <th   scope="col">bedroom</th>
+    <th   scope="col">kitchen</th>
+    <th   scope="col">price</th>
+    <th   width="60"></th>
+  </tr>
+    {% for i in prop %}
+  <tr>
+    <td >{{ loop.index }}</td>
+    <td >{{ i['zone'] }}</td>
+    <td >&nbsp;{{ i['lotfrontage'] }}</td>
+    <td >&nbsp;{{ i['lotarea'] }}</td>
+    <td  >&nbsp;{{ i['street_type'] }}</td>
+    <td >{{ i['alley_type'] }}</td>
+    <td >&nbsp;{{ i['lotshape'] }}</td>
+    <td >&nbsp;{{ i['utilities'] }}</td>
+    <td >&nbsp;{{ i['housestyle'] }}</td>
+    <td >&nbsp;{{ i['yearbuild'] }}</td>
+    <td >&nbsp;{{ i['bedroom'] }}</td>
+    <td >&nbsp;{{ i['kitchen'] }}</td>
+    <td >&nbsp;{{ i['price'] }}</td>
+
+    <td  ><a href="/delete/{{ i['property_id'] }}" class="btn btn-danger rounded">Delete</a></td>
+  </tr>
+    {% endfor %}
+
+{#<div id="sub"></div>#}
+</table>
+</form>
+</body>
+    </html>
+
+{% endblock %}

@@ -1,0 +1,70 @@
+{% extends 'user/index.html' %}
+{% block body %}
+
+
+<html>
+<head>
+</head>
+<body>
+<form action="" method="post">
+
+
+    <table align="center" >
+        <tr>
+
+     <th  scope="row">Category</th>
+    <td >
+
+      <input type="text" name="textfield4" id="textfield4" placeholder="Enter zone" required class="form-control"/>
+
+    </td>
+
+</tr>
+    </table>
+    <table  class="table table-hover">
+
+{#<tr><th></th><td><input type="submit"></td></tr>#}
+
+  <tr>
+    <th  scope="col">#</th>
+    <th   scope="col">Zone</th>
+    <th  scope="col">Lotfrontage</th>
+    <th  scope="col">Lotarea</th>
+    <th  scope="col">Street_Type</th>
+    <th   scope="col">Alley_Type</th>
+    <th   scope="col">Lotshape</th>
+    <th   scope="col">Utilities</th>
+    <th   scope="col">Housestyle</th>
+    <th   scope="col">Year Build</th>
+    <th   scope="col">Bedroom</th>
+    <th   scope="col">Kitchen</th>
+    <th   scope="col">Price</th>
+
+  </tr>
+    {% for i in prop %}
+  <tr>
+    <td >{{ loop.index }}</td>
+    <td >{{ i['zone'] }}</td>
+    <td >&nbsp;{{ i['lotfrontage'] }}</td>
+    <td >&nbsp;{{ i['lotarea'] }}</td>
+    <td  >&nbsp;{{ i['street_type'] }}</td>
+    <td >{{ i['alley_type'] }}</td>
+    <td >&nbsp;{{ i['lotshape'] }}</td>
+    <td >&nbsp;{{ i['utilities'] }}</td>
+    <td >&nbsp;{{ i['housestyle'] }}</td>
+    <td >&nbsp;{{ i['yearbuild'] }}</td>
+    <td >&nbsp;{{ i['bedroom'] }}</td>
+    <td >&nbsp;{{ i['kitchen'] }}</td>
+    <td >&nbsp;{{ i['price'] }}</td>
+
+
+  </tr>
+    {% endfor %}
+
+{#<div id="sub"></div>#}
+</table>
+</form>
+</body>
+    </html>
+
+{% endblock %}

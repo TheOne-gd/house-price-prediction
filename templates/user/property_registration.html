@@ -1,0 +1,116 @@
+{% extends 'user/index.html' %}
+{% block body %}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+</head>
+
+<body>
+<form id="form1" name="form1" method="post" action="" enctype="multipart/form-data">
+  <table class="table table-borderless">
+    <tr>
+      <td ><div align="center">Zone</div></td>
+      <td >
+      <select name="zone" id="select" class="form-control" required>
+
+          <option>Residential Low Density</option>
+          <option >Residential Medium Density</option>
+          <option>Commercial</option>
+          <option>Floating Village Residential</option>
+          <option>Residential High Density</option>
+</select></td>
+    </tr>
+    <tr>
+      <td ><div align="center">Lotfrontage</div></td>
+      <td><input type="text" name="lotfrontage" id="textfield" class="form-control" required/></td>
+    </tr>
+       <tr>
+      <td><div align="center">Lotarea</div></td>
+      <td><input type="text" name="lotarea" id="textfield" class="form-control" required /></td>
+    </tr>
+       <tr>
+           <td scope="row"><div align="center">Street Type</div> </td>
+    <td>
+      <select name="street" id="select" class="form-control" required>
+
+          <option>Pave</option>
+          <option>Grvl</option>
+</select></td></tr>
+    <tr>
+        <td><div align="center">Alley Type</div></td>
+      <td>
+      <select name="alley" id="select" class="form-control" required>
+ <option>No alley access</option>
+          <option>Pave</option>
+          <option >Grvl</option>
+</select></td>
+    </tr>
+    <tr>
+      <td><div align="center">Lotshape</div></td>
+      <td>
+      <select name="lotshape" id="select" class="form-control" required>
+
+          <option >Regular</option>
+          <option >IR1:Slightly Irregular </option>
+          <option>IR2: Moderately Irregular</option>
+          <option >IR2: Irregular</option>
+</select></td>
+    </tr>
+ <tr>
+      <td><div align="center">Utilities</div></td>
+      <td>
+      <select name="utilities" id="select" class="form-control" required>
+
+          <option >All Public Utilities (E,G,W,& S)</option>
+          <option >NoSeWa: Electricity and Gas Only
+</option>
+
+</select></td>
+    </tr>
+
+       <tr>
+           <td><div align="center">House Style</div></td>
+      <td>
+      <select name="house" id="select" class="form-control" required>
+
+          <option >1Story</option>
+          <option >2Story</option>
+          <option>1.5Story: 2nd level finished</option>
+          <option >1.5Story: 2nd level unfinished</option>
+          <option >Split Foyer</option>
+          <option>Split Lvl</option>
+          <option>2.5Story: 2nd level unfinished</option>
+          <option>2.5Story: 2nd level finished</option>
+</select></td>
+    </tr>
+       <tr>
+      <td height="26"><div align="center">Year Build</div></td>
+      <td><input type="text" name="yearbuild" id="textfield" class="form-control" required/></td>
+    </tr>
+       <tr>
+      <td height="26"><div align="center">Bedroom</div></td>
+      <td><input type="text" name="bedroom" id="textfield" class="form-control" required/></td>
+    </tr>
+       <tr>
+      <td height="26"><div align="center">Kitchen</div></td>
+      <td><input type="text" name="kitchen" id="textfield" class="form-control" required/></td>
+    </tr>
+
+       <tr>
+      <td height="26"><div align="center">Price</div></td>
+      <td><input type="text" name="price" id="price" class="form-control" required/></td>
+    </tr>
+
+    <tr>
+        <th></th>
+      <td>
+        <input type="submit" name="button" id="button" value="ADD" class="btn btn-dark rounded" />
+      </td>
+    </tr>
+  </table>
+</form>
+</body>
+</html>
+{% endblock %}

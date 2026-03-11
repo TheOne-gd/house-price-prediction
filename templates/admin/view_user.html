@@ -1,0 +1,38 @@
+{% extends 'admin/index.html' %}
+{% block body %}
+
+<html>
+<head>
+</head>
+<body>
+<form action="" method="post"><table  class="table table-hover">
+
+
+ <tr>
+    <th  scope="col">#</th>
+    <th   scope="col">Name</th>
+    <th  scope="col">Email</th>
+    <th  scope="col">Phone</th>
+    <th  scope="col"></th>
+
+  </tr>
+    {% for i in user %}
+  <tr>
+    <td >{{ loop.index }}</td>
+    <td >{{ i['name'] }}</td>
+    <td >&nbsp;{{ i['email'] }}</td>
+    <td >&nbsp;{{ i['phone'] }}</td>
+      {% if i.usertype =='block' %}
+      <td ><a href="/unblock_user/{{ i.user_id }}" class="btn btn-danger rounded">Unblock</a> </td>
+      {% else %}
+      <td ><a href="/block_user/{{ i.user_id }}" class="btn btn-danger rounded">Block</a> </td>{% endif %}
+  </tr>
+    {% endfor %}
+
+{#<div id="sub"></div>#}
+</table>
+</form>
+</body>
+    </html>
+
+{% endblock %}
